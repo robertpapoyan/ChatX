@@ -12,17 +12,12 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 
-class MainActivity() : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener,
-    Parcelable {
-
+class MainActivity : AppCompatActivity(){
 
     lateinit var toolbar: Toolbar
     lateinit var drawerLayout: DrawerLayout
     lateinit var navView: NavigationView
 
-    constructor(parcel: Parcel) : this() {
-
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,46 +34,13 @@ class MainActivity() : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         )
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
-        navView.setNavigationItemSelectedListener(this)
     }
 
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.nav_profile -> {
-                Toast.makeText(this, "Profile clicked", Toast.LENGTH_SHORT).show()
-            }
-            R.id.nav_messages -> {
-                Toast.makeText(this, "Messages clicked", Toast.LENGTH_SHORT).show()
-            }
-            R.id.nav_friends -> {
-                Toast.makeText(this, "Friends clicked", Toast.LENGTH_SHORT).show()
-            }
-            R.id.nav_update -> {
-                Toast.makeText(this, "Update clicked", Toast.LENGTH_SHORT).show()
-            }
-            R.id.nav_logout -> {
-                Toast.makeText(this, "Sign out clicked", Toast.LENGTH_SHORT).show()
-            }
-        }
-        drawerLayout.closeDrawer(GravityCompat.START)
-        return true
-    }
-
-    override fun writeToParcel(parcel: Parcel, flags: Int) {
-
-    }
-
-    override fun describeContents(): Int {
-        return 0
-    }
-
-    companion object CREATOR : Parcelable.Creator<MainActivity> {
-        override fun createFromParcel(parcel: Parcel): MainActivity {
-            return MainActivity(parcel)
-        }
-
-        override fun newArray(size: Int): Array<MainActivity?> {
-            return arrayOfNulls(size)
+    override fun onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
+            drawerLayout.closeDrawer(GravityCompat.START)
+        } else {
+            super.onBackPressed()
         }
     }
 }
