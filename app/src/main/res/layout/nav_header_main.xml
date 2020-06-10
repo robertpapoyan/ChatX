@@ -9,38 +9,76 @@
     android:gravity="bottom">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginBottom="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/userImageNavHeader"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/loginBtnNavHeader"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/profiledefault" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/userNameNavHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginLeft="12dp"
+        android:text="Robert P"
         android:textColor="#FFFFFF"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/userImageNavHeader"
+        app:layout_constraintTop_toTopOf="@+id/userImageNavHeader"
         tools:text="Robert P" />
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
+        android:id="@+id/userEmailNavHeader"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="8dp"
+        android:text="robertspapoyan@gmail.com"
         android:textColor="#FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/userImageNavHeader"
+        app:layout_constraintTop_toBottomOf="@+id/userNameNavHeader"
         tools:text="robertspapoyan@gmail.com" />
+
+    <Button
+        android:id="@+id/loginBtnNavHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:onClick="loginBtnNavHeaderClicked"
+        android:text="Login"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/addChannelBtn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:onClick="addChannelBtnClicked"
+        android:padding="5dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/addchannelbutton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

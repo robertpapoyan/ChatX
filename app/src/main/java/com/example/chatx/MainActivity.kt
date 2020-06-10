@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Parcel
 import android.os.Parcelable
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
@@ -42,5 +43,17 @@ class MainActivity : AppCompatActivity(){
         } else {
             super.onBackPressed()
         }
+    }
+
+    fun loginBtnNavHeaderClicked(view: View){
+
+    }
+
+    fun addChannelBtnClicked(view: View){
+
+    }
+
+    fun sendMessageClicked(view: View){
+
     }
 }
