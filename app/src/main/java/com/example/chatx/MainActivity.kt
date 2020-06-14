@@ -26,19 +26,24 @@ class MainActivity : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
+        if (firebaseUser == null) {
+            setContentView(R.layout.welcome_activity)
+        } else {
+            setContentView(R.layout.activity_main)
 
-        drawerLayout = findViewById(R.id.drawer_layout)
-        navView = findViewById(R.id.nav_view)
+            toolbar = findViewById(R.id.toolbar)
+            setSupportActionBar(toolbar)
 
-        val toggle = ActionBarDrawerToggle(
-            this, drawerLayout, toolbar, 0, 0
-        )
-        drawerLayout.addDrawerListener(toggle)
-        toggle.syncState()
+            drawerLayout = findViewById(R.id.drawer_layout)
+            navView = findViewById(R.id.nav_view)
+
+            val toggle = ActionBarDrawerToggle(
+                this, drawerLayout, toolbar, 0, 0
+            )
+            drawerLayout.addDrawerListener(toggle)
+            toggle.syncState()
+        }
     }
 
     override fun onBackPressed() {
@@ -60,5 +65,15 @@ class MainActivity : AppCompatActivity(){
 
     fun sendMessageClicked(view: View){
 
+    }
+
+    fun welcomeLoginBtnClicked(view: View){
+        val loginIntent = Intent(this, LoginActivity::class.java)
+        startActivity(loginIntent)
+    }
+
+    fun welcomeSignUpBtnClicked(view: View){
+        val createUserIntent = Intent(this, CreateUserActivity::class.java)
+        startActivity(createUserIntent)
     }
 }
