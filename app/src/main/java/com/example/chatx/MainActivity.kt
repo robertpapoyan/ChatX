@@ -13,12 +13,15 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseUser
 
 class MainActivity : AppCompatActivity(){
 
     lateinit var toolbar: Toolbar
     lateinit var drawerLayout: DrawerLayout
     lateinit var navView: NavigationView
+
+    var firebaseUser: FirebaseUser? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

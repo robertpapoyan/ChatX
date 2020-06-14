@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "992872526912",
+    "firebase_url": "https://chatx-ca496.firebaseio.com",
+    "project_id": "chatx-ca496",
+    "storage_bucket": "chatx-ca496.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:992872526912:android:58ad771463fbc6f6f55ba5",
+        "android_client_info": {
+          "package_name": "com.example.chatx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "992872526912-p32pjtj27p52nup1rm8h3jlk9haldms7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6FybI-i1aNeGZFes5wMm9IZHDzfQX7II"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "992872526912-p32pjtj27p52nup1rm8h3jlk9haldms7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
