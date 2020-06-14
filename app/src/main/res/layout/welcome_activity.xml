@@ -59,6 +59,7 @@
         android:layout_marginEnd="12dp"
         android:layout_marginRight="12dp"
         android:background="@color/colorPrimary"
+        android:onClick="welcomeSignUpBtnClicked"
         android:text="SIgn Up here"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
