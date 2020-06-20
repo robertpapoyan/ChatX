@@ -24,16 +24,16 @@ class MainActivity : AppCompatActivity(){
 
     var firebaseUser: FirebaseUser? = null
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         firebaseUser = FirebaseAuth.getInstance().currentUser
 
         if (firebaseUser == null) {
+
             setContentView(R.layout.welcome_activity)
         } else {
+
             setContentView(R.layout.activity_main)
 
             toolbar = findViewById(R.id.toolbar)
@@ -63,14 +63,6 @@ class MainActivity : AppCompatActivity(){
         startActivity(loginIntent)
     }
 
-    fun addChannelBtnClicked(view: View){
-
-    }
-
-    fun sendMessageClicked(view: View){
-
-    }
-
     fun welcomeLoginBtnClicked(view: View){
         val loginIntent = Intent(this, LoginActivity::class.java)
         startActivity(loginIntent)
@@ -79,5 +71,13 @@ class MainActivity : AppCompatActivity(){
     fun welcomeSignUpBtnClicked(view: View){
         val createUserIntent = Intent(this, CreateUserActivity::class.java)
         startActivity(createUserIntent)
+    }
+
+    fun addChannelBtnClicked(view: View){
+
+    }
+
+    fun sendMessageClicked(view: View){
+
     }
 }
